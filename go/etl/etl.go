@@ -8,10 +8,10 @@ const alphabetSize = 26
 
 func Transform(legacy map[int][]string) map[string]int {
 	m := make(map[string]int, alphabetSize)
-	for i := range legacy {
-		for _, tile := range legacy[i] {
+	for score := range legacy {
+		for _, tile := range legacy[score] {
 			tile = strings.ToLower(tile)
-			m[tile] = i
+			m[tile] = score
 		}
 	}
 	return m
