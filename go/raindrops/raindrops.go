@@ -2,7 +2,7 @@ package raindrops
 
 import (
 	"bytes"
-	"fmt"
+	"strconv"
 )
 
 // Convert translates integers into randrop-speak.  The randrop-speak
@@ -18,7 +18,7 @@ func Convert(x int) string {
 		}
 	}
 	if !primeFound {
-		fmt.Fprint(&buf, x)
+		return strconv.Itoa(x)
 	}
 	return buf.String()
 }
