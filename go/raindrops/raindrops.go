@@ -4,7 +4,7 @@ import (
 	"strconv"
 )
 
-// Convert translates integers into randrop-speak.  The randrop-speak
+// Convert translates integers into randrop-speak.  The raindrop-speak
 // specification can be found at
 // http://exercism.io/exercises/go/raindrops/readme
 func Convert(x int) string {
