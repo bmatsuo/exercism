@@ -4,7 +4,7 @@ import "math"
 
 // Square returns the number of grains of wheat on square i of the chessboard.
 func Square(i int) uint64 {
-	if i < 0 {
+	if i < 1 {
 		panic("invalid square")
 	}
 	return uint64(1) << uint(i-1)
