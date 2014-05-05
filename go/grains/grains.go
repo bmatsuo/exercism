@@ -7,7 +7,7 @@ func Square(i int) uint64 {
 	if i < 1 {
 		panic("invalid square")
 	}
-	return uint64(1) << uint(i-1)
+	return 1 << uint(i-1)
 }
 
 // TotalGrains is the number of grains on the chessboard.  The number of grains
