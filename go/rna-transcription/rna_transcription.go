@@ -4,21 +4,13 @@ import "strings"
 
 // ToRNA returns the RNA sequence transcribed from dna.  Runes not representing
 // a nucleotide are left unchanged.
-func ToRna(dna string) string {
-	return strings.Map(trRNA, dna)
+func ToRna(input string) string {
+	return trRNA.Replace(input)
 }
 
-func trRNA(c rune) rune {
-	switch c {
-	case 'G':
-		return 'C'
-	case 'C':
-		return 'G'
-	case 'T':
-		return 'A'
-	case 'A':
-		return 'U'
-	default:
-		return c
-	}
-}
+var trRNA = strings.NewReplacer(
+	"G", "C",
+	"C", "G",
+	"T", "A",
+	"A", "U",
+)
